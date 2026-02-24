@@ -4,6 +4,7 @@
 
 here::here()
 source("R/swf_core.R")
+load_dependencies()
 
 library(ggplot2)
 library(ggridges)
