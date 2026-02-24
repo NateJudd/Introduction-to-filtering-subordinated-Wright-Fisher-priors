@@ -53,7 +53,14 @@ rownames(posterior_matrix) <- paste0("pi_", seq_along(posterior_list) - 1)
 
 posterior_melt <- melt(posterior_matrix)
 
-ggplot(posterior_melt, aes(x = value, y = Var1)) +
+# create plot object
+p <- ggplot(posterior_melt, aes(x = value, y = Var1)) +
   geom_density_ridges2() +
   theme_minimal()
+
+# create output directory if it doesn't already exist
+dir.create("outputs/figures", recursive = TRUE, showWarnings = FALSE)
+
+# save figure to outpute directory
+ggsave("outputs/figures/sequential_update.png", plot = p, width = 8, height = 6)
 
