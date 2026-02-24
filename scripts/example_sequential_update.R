@@ -6,10 +6,6 @@ here::here()
 source("R/swf_core.R")
 load_dependencies()
 
-library(ggplot2)
-library(ggridges)
-library(reshape2)
-
 # ---- Initial parameters ----
 theta0 <- c(alpha = 1.5, beta = 1.5)
 
