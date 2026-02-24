@@ -4,6 +4,25 @@
 # ============================================================
 
 # ------------------------------------------------------------
+# Dependency management
+# ------------------------------------------------------------
+
+load_dependencies <- function(pkgs = c("ggplot2", "ggridges", "reshape2")) {
+  
+  installed <- rownames(installed.packages())
+  
+  for (pkg in pkgs) {
+    if (!pkg %in% installed) {
+      message("Installing missing package: ", pkg)
+      install.packages(pkg, dependencies = TRUE)
+    }
+    suppressPackageStartupMessages(
+      library(pkg, character.only = TRUE)
+    )
+  }
+}
+
+# ------------------------------------------------------------
 # Core rate functions
 # ------------------------------------------------------------
 
