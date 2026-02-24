@@ -1,0 +1,77 @@
+# ============================================================
+# R / RStudio
+# ============================================================
+
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# RStudio project files (keep the .Rproj file itself)
+*.Rproj.user
+
+# ============================================================
+# Dependency management
+# ============================================================
+
+# renv (keep renv.lock, ignore library folder)
+renv/library/
+renv/staging/
+
+# packrat (legacy)
+packrat/lib/
+packrat/src/
+
+# ============================================================
+# Output directories
+# ============================================================
+
+# Generated outputs (figures, model results, logs)
+outputs/
+results/
+figures/
+plots/
+
+# Logs
+*.log
+
+# ============================================================
+# Data
+# ============================================================
+
+# Ignore raw or intermediate data by default
+data/
+!data/.gitkeep
+
+# If you want to allow specific small example data:
+# !data/example.csv
+
+# ============================================================
+# System files
+# ============================================================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Linux
+*~
+
+# ============================================================
+# Temporary / backup files
+# ============================================================
+
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# ============================================================
+# Testing / coverage (if added later)
+# ============================================================
+
+coverage/
+*.Rcheck/
